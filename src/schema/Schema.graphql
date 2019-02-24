@@ -1,6 +1,5 @@
-# import * from 'Inputs.graphql'
-# import * from 'Query.graphql'
-# import * from 'Mutations.graphql'
+# import Query.* from "Query.graphql"
+# import Mutation.* from "Mutations.graphql"
 
 type Investor {
     id: ID!
@@ -22,6 +21,18 @@ type Investment {
     shareAmount: Float!
     amountPerShare: Float!
     investor: Investor!
+}
+
+input CreateInvestorInput {
+    firstName: String!
+    lastName: String!
+}
+
+input CreateInvestmentInput {
+    investorId: String!
+    companyName: String!
+    shareAmount: Float!
+    amountPerShare: Float!
 }
 
 

@@ -1,5 +1,5 @@
 type Mutation {
     createInvestor(newInvestor: CreateInvestorInput!): Investor
-    createInvestment(newInvestment: CreateInvestmentInput!): [Investments!]!
-    deleteInvestment(investmentId: String!): [Investments!]
+    createInvestment(newInvestment: CreateInvestmentInput!): [Investment!]!
+    deleteInvestment(investmentId: String!): [Investment!]
 }

@@ -1,7 +1,7 @@
 import { resolvers } from './resolvers'
+import * as path from 'path'
 import express = require('express');
 import {importSchema} from 'graphql-import'
-import * as path from 'path'
 import {ApolloServer} from 'apollo-server-express'
 import {Context} from './types/types'
 import * as cors from "cors";
@@ -9,8 +9,8 @@ import {prisma} from '../prisma/generated/prisma-client'
 
 const graphqlPath: string  = '/api/graphql'
 
-const schema = path.resolve('src/schema/schema.graphql')
-
+const schema = path.resolve('src/schema/Schema.graphql')
+console.log(importSchema(schema))
 const typeDefs = importSchema(schema)
 
 const app: express.Application = express();
