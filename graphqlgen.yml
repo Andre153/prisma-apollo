@@ -1,0 +1,17 @@
+language: typescript
+
+schema: ./src/schema/Schema.graphql
+
+context: ./src/types/types.ts:Context
+
+# Map SDL types from the GraphQL schema to TS models
+models:
+  files:
+  - ./prisma/generated/prisma-client
+  - ./src/types/types.ts
+
+output: ./src/generated/graphqlgen.ts
+
+resolver-scaffolding:
+  output: ./src/generated/tmp-resolvers/
+  layout: file-per-type

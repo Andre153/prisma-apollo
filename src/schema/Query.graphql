@@ -1,0 +1,5 @@
+type Query {
+    investor: Investor
+    investments(investorId: String!): [Investment!]
+    investment(investmentId: String!): Investment
+}

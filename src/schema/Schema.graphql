@@ -1,0 +1,27 @@
+# import * from 'Inputs.graphql'
+# import * from 'Query.graphql'
+# import * from 'Mutations.graphql'
+
+type Investor {
+    id: ID!
+    auth: AuthUser!
+    fistName: String!
+    lastName: String!
+    investments: [Investment!]
+}
+
+type AuthUser {
+    id: ID!
+    token: String!
+    isActive: Boolean!
+}
+
+type Investment {
+    id: ID!
+    companyName: String!
+    shareAmount: Float!
+    amountPerShare: Float!
+    investor: Investor!
+}
+
+

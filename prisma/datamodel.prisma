@@ -1,0 +1,21 @@
+type Investor {
+    id: ID! @unique
+    auth: AuthUser!
+    fistName: String!
+    lastName: String!
+    investments: [Investment!]
+}
+
+type AuthUser {
+  id: ID! @unique
+  token: String!
+  isActive: Boolean!
+}
+
+type Investment {
+    id: ID! @unique
+    companyName: String!
+    shareAmount: Float!
+    amountPerShare: Float!
+    investor: Investor!
+}
